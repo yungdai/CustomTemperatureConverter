@@ -10,8 +10,8 @@
 
 @interface TemperatureViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UISegmentedControl *temperatureSelectionControl;
-@property (weak, nonatomic) IBOutlet UILabel *temperatureResultLabel;
-@property (strong, nonatomic) IBOutlet UITextField *temperatureInput;
+@property (weak, nonatomic) UISegmentedControl *temperatureSelectionControl;
+@property (weak, nonatomic) UILabel *temperatureResultLabel;
+@property (strong, nonatomic) UITextField *temperatureInput;
 
 @end

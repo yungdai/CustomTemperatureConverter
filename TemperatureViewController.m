@@ -26,6 +26,12 @@
     temperatureSelectionControl.frame = CGRectMake(16, 41, 568, 29);
     [temperatureSelectionControl addTarget:self action:@selector(selectedTemperature:) forControlEvents:UIControlEventValueChanged];
     [self.view addSubview:temperatureSelectionControl];
+    
+    [temperatureSelectionControl setTranslatesAutoresizingMaskIntoConstraints:NO];
+    // adding constraints for that button
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.view attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:temperatureSelectionControl attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0.0]];
+    
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.view attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:temperatureSelectionControl attribute:NSLayoutAttributeCenterY multiplier:1.0 constant:0.0]];
 
     
     

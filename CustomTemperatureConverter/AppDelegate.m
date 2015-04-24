@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 // adding the ViewController
 #import "ViewController.h"
+#import "TemperatureViewController.h"
 
 @interface AppDelegate ()
 
@@ -22,14 +23,12 @@
     
     // create an instanced of the temperatureViewController
     TemperatureViewController *temperatureViewController = [[TemperatureViewController alloc]init];
-    CGRect converterScreen = [[UIScreen mainScreen]bounds];
-    UIViewController *tempController = [[UIViewController alloc]init];
     
     // create a new window with a white background
     self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     // create the view
-    self.window.rootViewController = tempController;
+    self.window.rootViewController = temperatureViewController;
     
     // allow for receiving keybaord and touch events
     [self.window makeKeyAndVisible];
