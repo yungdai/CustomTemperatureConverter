@@ -23,7 +23,7 @@
     
     // create the segement control
     UISegmentedControl *temperatureSelectionControl = [[UISegmentedControl alloc]initWithItems:@[@"Celsius",@"Farenheit"]];
-    temperatureSelectionControl.frame = CGRectMake(16, 41, 568, 29);
+//    temperatureSelectionControl.frame = CGRectMake(16, 41, 568, 29);
     [temperatureSelectionControl addTarget:self action:@selector(selectedTemperature:) forControlEvents:UIControlEventValueChanged];
     [self.view addSubview:temperatureSelectionControl];
     

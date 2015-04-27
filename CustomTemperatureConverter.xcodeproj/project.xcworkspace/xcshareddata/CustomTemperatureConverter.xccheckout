@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>8B510AD5-7DEA-44AA-95DE-E5F52F3961D9</string>
 	<key>IDESourceControlProjectName</key>
-	<string>CustomTemperatureConverter</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>060EB411B0CF3BEC0D03D5A370EF10A73F7989EA</key>
 		<string>https://github.com/yungdai/CustomTemperatureConverter.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>CustomTemperatureConverter.xcodeproj</string>
+	<string>CustomTemperatureConverter.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>060EB411B0CF3BEC0D03D5A370EF10A73F7989EA</key>
