@@ -28,13 +28,13 @@
     [self.view addSubview:temperatureSelectionControl];
     
     [temperatureSelectionControl setTranslatesAutoresizingMaskIntoConstraints:NO];
-    // adding constraints for that button
+    // adding constraints for that selector
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.view attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:temperatureSelectionControl attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0.0]];
+    // adding the placement of the selector in the Y axis
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:temperatureSelectionControl attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTop multiplier:1.0f constant:20.0f]];
     
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.view attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:temperatureSelectionControl attribute:NSLayoutAttributeCenterY multiplier:1.0 constant:0.0]];
-
-    
-    
+    //scretching the selector with constraints
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-20-[view]-20-|" options:0 metrics:nil views:@{@"view":temperatureSelectionControl}]];
 }
 
 - (void)viewDidLoad {
