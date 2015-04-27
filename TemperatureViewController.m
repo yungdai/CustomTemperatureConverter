@@ -18,8 +18,7 @@
 // method for the UISegment Control layout
 
 - (void)initSegmentedControl {
-    // make the background white
-    self.view.backgroundColor = [UIColor whiteColor];
+
     
     // create the segement control
     UISegmentedControl *temperatureSelectionControl = [[UISegmentedControl alloc]initWithItems:@[@"Celsius",@"Farenheit"]];
@@ -28,19 +27,28 @@
     [self.view addSubview:temperatureSelectionControl];
     
     [temperatureSelectionControl setTranslatesAutoresizingMaskIntoConstraints:NO];
-    // adding constraints for that selector
+    // adding constraints for the selector in the X axis
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.view attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:temperatureSelectionControl attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0.0]];
     // adding the placement of the selector in the Y axis
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:temperatureSelectionControl attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTop multiplier:1.0f constant:20.0f]];
     
     //scretching the selector with constraints
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-20-[view]-20-|" options:0 metrics:nil views:@{@"view":temperatureSelectionControl}]];
+
+
 }
+
+
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    // make the background white
+    self.view.backgroundColor = [UIColor whiteColor];
     [self initSegmentedControl];
+
+
 }
 
 - (void)didReceiveMemoryWarning {
